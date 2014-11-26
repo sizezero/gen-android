@@ -16,6 +16,10 @@ proguardOptions in Android ++= Seq("-dontobfuscate", "-dontoptimize", "-keepattr
 
 libraryDependencies += "org.scaloid" %% "scaloid" % "3.6.1-10" withSources() withJavadoc()
 
+// TODO: would like to only add this to the test configuration
+
+libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.1"
+
 scalacOptions in Compile += "-feature"
 
 run <<= run in Android
